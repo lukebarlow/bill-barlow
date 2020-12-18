@@ -5,7 +5,7 @@ module.exports = (opts = {}) => {
   return async (tree) => {
     tree.children = tree.children.map(node => {
       if (node.type === 'paragraph' && node.children[0].type === 'link') {
-        const result = node.children[0].url.match(/=([a-zA-Z]+)$/)
+        const result = node.children[0].url.match(/=([\_a-zA-Z0-9]+)$/)
         if (result) {
           return {
             type: 'jsx',

@@ -10,7 +10,6 @@
     "test": "jest"
   },
   "dependencies": {
-    "@agentofuser/remark-oembed": "^1.0.4",
     "@mapbox/rehype-prism": "^0.5.0",
     "@svgr/webpack": "^5.4.0",
     "@types/js-yaml": "^3.12.5",
@@ -26,7 +25,6 @@
     "react-schemaorg": "^1.2.0",
     "react-twitter-embed": "^3.0.3",
     "react-youtube": "^7.11.3",
-    "remark-oembed": "^1.2.1",
     "schema-dts": "^0.6.0",
     "unist-util-visit": "^2.0.3"
   },
