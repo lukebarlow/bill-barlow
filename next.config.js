@@ -1,8 +1,5 @@
 const withMdxEnhanced = require("next-mdx-enhanced");
-const oembed = require('remark-oembed');
-
 const convertYoutubeLinks = require('./src/plugins/convertYoutubeLinks.js')
-
 const rehypePrism = require("@mapbox/rehype-prism");
 
 module.exports = withMdxEnhanced({
