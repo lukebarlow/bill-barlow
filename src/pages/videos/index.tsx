@@ -5,7 +5,9 @@ import OpenGraphMeta from "../../components/meta/OpenGraphMeta";
 import TwitterCardMeta from "../../components/meta/TwitterCardMeta";
 import PostList from "../../components/PostList";
 import config from "../../lib/config";
-import { countPosts, listPostContent, PostContent } from "../../lib/posts";
+import { countPosts, listPostContent, PostContent } from "../../lib/listDir";
+
+
 import { listTags, TagContent } from "../../lib/tags";
 import Head from "next/head";
 
@@ -17,25 +19,29 @@ type Props = {
     pages: number;
   };
 };
-export default function Index({ posts, tags, pagination }: Props) {
-  const url = "/posts";
-  const title = "All posts";
+export default function VideoIndex({ posts, tags, pagination }: Props) {
+  const url = "/videos";
+  const title = "Videos";
+
+  console.log('rendering video')
+  console.log('posts', posts)
+
   return (
     <Layout>
       <BasicMeta url={url} title={title} />
       <OpenGraphMeta url={url} title={title} />
       <TwitterCardMeta url={url} title={title} />
-      <PostList posts={posts} tags={tags} pagination={pagination} directory='posts' />
+      <PostList posts={posts} tags={tags} pagination={pagination} directory='videos' />
     </Layout>
   );
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const posts = listPostContent(1, config.posts_per_page);
+  const posts = listPostContent(1, config.posts_per_page, 'videos');
   const tags = listTags();
   const pagination = {
     current: 1,
-    pages: Math.ceil(countPosts() / config.posts_per_page),
+    pages: Math.ceil(countPosts('videos') / config.posts_per_page),
   };
   return {
     props: {

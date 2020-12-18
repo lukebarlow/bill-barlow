@@ -1,19 +1,23 @@
 {
-  "base_url": "https://wutali-nextjs-netlify-blog.netlify.app",
-  "site_title": "Next.js Netlify Blog",
-  "site_description": "Next.js blog template for Netlify",
+  "base_url": "https://llibwolrab.org",
+  "site_title": "llibwolrab.org",
+  "site_description": "",
   "site_keywords": [
     {
-      "keyword": "Next.js"
+      "keyword": "Llib"
     },
     {
-      "keyword": "Netlify"
+      "keyword": "Wolrab"
     },
     {
-      "keyword": "React"
+      "keyword": "LlibWolrab"
+    },
+    {
+      "keyword": "Poetry"
+    },
+    {
+      "keyword": "Videos"
     }
   ],
-  "posts_per_page": 5,
-  "twitter_account": "@my-account",
-  "github_account": "wutali"
+  "posts_per_page": 1000
 }

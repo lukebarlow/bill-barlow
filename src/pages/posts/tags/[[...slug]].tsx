@@ -21,6 +21,7 @@ type Props = {
 export default function Index({ posts, tag, pagination, page }: Props) {
   const url = `/posts/tags/${tag.name}` + (page ? `/${page}` : "");
   const title = tag.name;
+  
   return (
     <Layout>
       <BasicMeta url={url} title={title} />

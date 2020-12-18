@@ -32,6 +32,7 @@ export default function Index({
 }: Props) {
   const keywords = tags.map((it) => getTag(it).name);
   const authorName = getAuthor(author).name;
+  
   return ({ children: content }) => {
     return (
       <Layout>
@@ -67,25 +68,25 @@ export default function Index({
                 <div>
                   <Date date={date} />
                 </div>
-                <div>
+                {/* <div>
                   <Author author={getAuthor(author)} />
-                </div>
+                </div> */}
               </div>
             </header>
             <div className={styles.content}>{content}</div>
-            <ul className={"tag-list"}>
+            {/* <ul className={"tag-list"}>
               {tags.map((it, i) => (
                 <li key={i}>
                   <TagButton tag={getTag(it)} />
                 </li>
               ))}
-            </ul>
+            </ul> */}
           </article>
           <footer>
             <div className={"social-list"}>
               <SocialList />
             </div>
-            <Copyright />
+            {/* <Copyright /> */}
           </footer>
         </div>
         <style jsx>
